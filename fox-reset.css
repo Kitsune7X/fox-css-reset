@@ -1,37 +1,37 @@
-/*  */
+/* Minimal reset layer */
 
-/* Use a better box model */
+/* Better box model */
 *,
 ::before,
 ::after {
   box-sizing: border-box;
 }
 
-/* Setup default fonts */
+/* Establish a resilient system font stack for consistent typography */
 html {
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji";
 }
 
-/* Remove default margin */
+/* Remove user agent margins so spacing is always intentional */
 * {
   margin: 0;
 }
 
-/* Enable keyword animation */
+/* Allow keyword-driven size interpolation when motion is permitted */
 @media (prefers-reduced-motion: no-preference) {
   html {
     interpolate-size: allow-keywords;
   }
 }
 
-/* Correct line height and text rendering (Mac OS) */
+/* Ease reading with a relaxed line height and macOS font smoothing */
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Make media easier to work with */
+/* Make embedded media block-level and fluid by default */
 img,
 picture,
 video,
@@ -41,7 +41,7 @@ svg {
   max-width: 100%;
 }
 
-/* Inherit fonts */
+/* Ensure interactive controls inherit the surrounding font choices */
 input,
 button,
 textarea,
@@ -49,7 +49,7 @@ select {
   font: inherit;
 }
 
-/* Avoid text overflow */
+/* Keep long words and headings from breaking layout boxes */
 p,
 h1,
 h2,
@@ -60,12 +60,12 @@ h6 {
   overflow-wrap: break-word;
 }
 
-/* Better line wrapping for `<p>` */
+/* Ask browsers for gentler paragraph wrapping to soften ragged edges */
 p {
   text-wrap: pretty;
 }
 
-/* Better line wrapping for header and inherit font */
+/* Headings inherit the base font and balance multi-line titles */
 h1,
 h2,
 h3,
@@ -76,8 +76,7 @@ h6 {
   text-wrap: balance;
 }
 
-/* Remove list styling */
-/* Add role="list" to keep list semantics but hide bullets points */
+/* Hide default markers only on lists opted-in with role="list" for custom styling */
 ol[role="list"],
 ul[role="list"] {
   list-style: none;
