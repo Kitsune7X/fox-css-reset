@@ -1,0 +1,85 @@
+/*  */
+
+/* Use a better box model */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/* Setup default fonts */
+html {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+}
+
+/* Enable keyword animation */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+/* Correct line height and text rendering (Mac OS) */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Make media easier to work with */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Avoid text overflow */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Better line wrapping for `<p>` */
+p {
+  text-wrap: pretty;
+}
+
+/* Better line wrapping for header and inherit font */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: inherit;
+  text-wrap: balance;
+}
+
+/* Remove list styling */
+/* Add role="list" to keep list semantics but hide bullets points */
+ol[role="list"],
+ul[role="list"] {
+  list-style: none;
+  padding-inline: 0;
+}
