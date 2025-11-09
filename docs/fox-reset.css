@@ -7,13 +7,13 @@
   box-sizing: border-box;
 }
 
-/* Establish a resilient system font stack for consistent typography */
+/* System font stack for consistent typography */
 html {
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji";
 }
 
-/* Remove user agent margins so spacing is always intentional */
+/* Remove UA margin */
 * {
   margin: 0;
 }
@@ -60,7 +60,7 @@ h6 {
   overflow-wrap: break-word;
 }
 
-/* Ask browsers for gentler paragraph wrapping to soften ragged edges */
+/* Better text wrap */
 p {
   text-wrap: pretty;
 }
@@ -76,9 +76,9 @@ h6 {
   text-wrap: balance;
 }
 
-/* Hide default markers only on lists opted-in with role="list" for custom styling */
-ol[role="list"],
-ul[role="list"] {
+/* Hide default markers in list */
+ol,
+ul {
   list-style: none;
   padding-inline: 0;
 }
